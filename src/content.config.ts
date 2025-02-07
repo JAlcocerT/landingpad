@@ -2,7 +2,8 @@ import { z, defineCollection } from "astro:content";
 import { glob, file } from "astro/loaders";
 
 const bioCollection = defineCollection({
-	loader: glob({ pattern: "**/[^_]*{md,mdx}", base: "./src/data/bio" }),
+	//loader: glob({ pattern: "**/[^_]*{md,mdx}", base: "./src/data/bio" }),
+	loader: glob({ pattern: "**/[^_]*{md,mdx}", base: "./prod/src/data/bio" }),
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),
@@ -14,7 +15,7 @@ const bioCollection = defineCollection({
 });
 
 const socialsCollection = defineCollection({
-	loader: glob({ pattern: "**/[^_]*.{yml,yaml}", base: "./src/data/socials" }),
+	loader: glob({ pattern: "**/[^_]*.{yml,yaml}", base: "./prod/src/data/socials" }),
 	schema: z.object({
 		title: z.string(),
 		url: z.string(),
@@ -50,7 +51,7 @@ const socialsCollection = defineCollection({
 });
 
 const linksCollection = defineCollection({
-	loader: glob({ pattern: "**/[^_]*.{yml,yaml}", base: "./src/data/links" }),
+	loader: glob({ pattern: "**/[^_]*.{yml,yaml}", base: "./prod/src/data/links" }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),

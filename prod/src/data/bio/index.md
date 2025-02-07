@@ -1,5 +1,5 @@
 ---
-name: 'Test Keystatic '
+name: 'Test Keystatic'
 theme: dark
 blur: no blur
 avatar: ./avatar.png

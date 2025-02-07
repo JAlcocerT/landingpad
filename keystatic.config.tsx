@@ -33,7 +33,7 @@ export default config({
 	//cloud: { project: "cosmic-themes/landingpad" },
 	
 	ui: {
-		brand: { name: "Cosmic Themes" },
+		brand: { name: "Testing KeyStaticCMS" },
 	},
 	singletons: {
 		/**
@@ -42,7 +42,8 @@ export default config({
 		 */
 		config: singleton({
 			label: "Bio and Config",
-			path: `src/data/bio/`,
+			//path: `src/data/bio/`,
+			path: `prod/src/data/bio/`,
 			format: { contentField: "bio" },
 			schema: {
 				name: fields.text({
@@ -111,7 +112,7 @@ export default config({
 	collections: {
 		socials: collection({
 			label: "Socials",
-			path: `src/data/socials/*`,
+			path: `prod/src/data/socials/*`,
 			columns: ["order"],
 			slugField: "title",
 			schema: {
@@ -172,7 +173,7 @@ export default config({
 		 */
 		links: collection({
 			label: "Links",
-			path: `src/data/links/*`,
+			path: `prod/src/data/links/*`,
 			columns: ["order"],
 			slugField: "title",
 			schema: {
