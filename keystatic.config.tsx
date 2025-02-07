@@ -20,7 +20,7 @@ export default config({
 
 	storage: {
 				kind: "github",
-				pathPrefix: "prod",
+				pathPrefix: "", // previously was prod
 				repo: {
 					owner: "JAlcocerT",
 					name: "landingpad"
