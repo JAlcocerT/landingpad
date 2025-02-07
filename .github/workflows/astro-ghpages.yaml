@@ -1,4 +1,3 @@
-#https://github.com/JAlcocerT/web3/blob/main/.github/workflows/deploy_astro.yml
 name: Deploy Astro to GitHub Pages
 
 on:
@@ -17,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out your repository using git
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4 #updated from v2
 
       - name: Use Node.js 18
         uses: actions/setup-node@v2
@@ -45,4 +44,4 @@ jobs:
     steps:
       - name: Deploy Astro Generated files to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4 #updated from v1
