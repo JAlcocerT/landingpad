@@ -15,11 +15,23 @@ import { collection, fields, singleton } from "@keystatic/core";
 
 export default config({
 	// works in local mode in dev, then cloud mode in prod
-	storage: import.meta.env.DEV === true ? { kind: "local" } : { kind: "cloud" },
+
+	//storage: import.meta.env.DEV === true ? { kind: "local" } : { kind: "cloud" },
+
+	storage: {
+				kind: "github",
+				pathPrefix: "prod",
+				repo: {
+					owner: "JAlcocerT",
+					name: "landingpad"
+				}
+	},
+
 	// cloud deployment is free to sign up (up to 3 users per team)
 	// docs: https://keystatic.com/docs/cloud
 	// create a Keystatic Cloud account here: https://keystatic.cloud/
-	cloud: { project: "cosmic-themes/landingpad" },
+	//cloud: { project: "cosmic-themes/landingpad" },
+	
 	ui: {
 		brand: { name: "Cosmic Themes" },
 	},
